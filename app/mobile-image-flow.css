@@ -3,23 +3,19 @@
    section collapses. */
 .mobile-flow-image{display:none;margin-top:32px;margin-bottom:26px}
 .mobile-flow-image>img{display:block;width:100%;border-radius:12px}
+.hero-stage-mobile{display:none}
 
 @media(max-width:850px){
   .mobile-flow-image-850{display:block}
   .desktop-flow-image-850{display:none!important}
+  .hero-stage-mobile{display:block;width:100%;height:420px;margin:8px 0 28px;position:relative;perspective:1000px;transform:translateY(var(--parallax,0px));--tilt-x:0deg;--tilt-y:0deg}
+  .hero-stage-mobile .hero-art{top:6%;left:-4%;width:108%}
+  .hero-stage-mobile .orbit-one{width:85%;height:95%;top:1%;left:5%}
+  .hero-stage-mobile .annotation-top{top:0}
+  .hero-stage-mobile .annotation-bottom{bottom:45px;right:0}
+  .hero-stage-mobile .stage-caption{bottom:20px;left:8%}
   .inner-hero-mobile-media{overflow:hidden;background:#24291e}
   .inner-hero-mobile-media img{height:440px;object-fit:cover}
-
-  /* Homepage hero: move the original interactive stage into the mobile flow
-     instead of replacing it with a static duplicate. The existing orbital,
-     levitation, annotation, parallax, and pointer behavior remain intact. */
-  .hero .hero-mobile-inline{display:none!important}
-  .hero .hero-copy{display:contents}
-  .hero .hero-copy>h1{grid-row:1;padding-top:42px}
-  .hero .hero-stage.desktop-flow-image-850{display:block!important;grid-row:2;width:100%;height:420px;margin:8px 0 28px;z-index:0}
-  .hero .hero-copy>p:not(.hero-shopping-note){grid-row:3}
-  .hero .hero-actions{grid-row:4}
-  .hero .hero-shopping-note{grid-row:5}
 }
 
 @media(max-width:600px){
@@ -27,8 +23,14 @@
   .desktop-flow-image-600{display:none!important}
   .mobile-flow-image{margin-top:28px;margin-bottom:24px}
   .inner-hero-mobile-media img{height:360px}
-  .hero .hero-copy>h1{padding-top:39px}
-  .hero .hero-stage.desktop-flow-image-850{height:355px;margin:4px 0 25px}
+  .hero-stage-mobile{height:355px;margin:4px 0 25px;transform:none}
+  .hero-stage-mobile .hero-art{left:-8%;width:116%;top:2%}
+  .hero-stage-mobile .orbit-one{width:79%;height:97%;left:10%;top:0}
+  .hero-stage-mobile .orbit-two{top:30%;height:45%}
+  .hero-stage-mobile .orbit-three{height:95%;top:0}
+  .hero-stage-mobile .annotation-top{top:23px;right:0}
+  .hero-stage-mobile .annotation-bottom{bottom:35px;right:0}
+  .hero-stage-mobile .stage-caption{bottom:7px;left:6%}
   .feature-mobile-inline{background:#e9ece1;overflow:hidden;padding:20px}
   .feature-mobile-inline img{height:260px;object-fit:contain}
   .ritual-mobile-inline,.learn-mobile-inline{position:relative;overflow:hidden;background:#252b1e}
