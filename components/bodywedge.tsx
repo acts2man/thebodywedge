@@ -10,6 +10,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { products } from "@/lib/catalog";
 import { BuyerContexts, BuyDirect, CustomerVoices, NewsletterSection, PractitionerStrip } from "@/components/bodywedge-phase1";
+import { HeroStage } from "@/components/hero-stage";
 
 const MotionContext = createContext({ paused: false });
 const A = "/assets/";
@@ -80,14 +81,8 @@ function Hero() {
   }, [paused]);
   return <section className="hero" ref={stage}>
     <div className="hero-topline"><span>THE PATENTED TOOL FOR ABDOMINAL SELF-MASSAGE</span><span>THE BODY WEDGE / DESIGNED AROUND YOU</span></div>
-    <div className="hero-layout"><div className="hero-copy"><h1><span className="hero-line">DEEP CORE.</span><span className="hero-line"><em>DAILY CARE.</em></span></h1><div className="mobile-flow-image mobile-flow-image-850 hero-mobile-inline"><img src={`${A}black-original.png`} alt="The Body Wedge’s original patented shape, with raised contact points and a curved rocker base" width="639" height="723" fetchPriority="high"/></div><p>The Body Wedge is a patented self-massage tool designed to target the psoas and deep abdominal muscles. A distinctive shape. A more focused way to make core care part of your day.</p><div className="hero-actions"><Action href="/products/the-body-wedge">Shop Now — from $40 USD</Action><VideoButton title="How The Body Wedge works"/></div><p className="hero-shopping-note">Size &amp; density options · Instructions included · Buy direct</p></div>
-      <div className="hero-stage desktop-flow-image-850" onPointerMove={e => { if (paused || e.pointerType === "touch") return; const r=e.currentTarget.getBoundingClientRect(); e.currentTarget.style.setProperty("--tilt-x", `${(e.clientY-r.top-r.height/2)/r.height*-4}deg`); e.currentTarget.style.setProperty("--tilt-y", `${(e.clientX-r.left-r.width/2)/r.width*5}deg`); }} onPointerLeave={e => { e.currentTarget.style.setProperty("--tilt-x", "0deg"); e.currentTarget.style.setProperty("--tilt-y", "0deg"); }}>
-        <div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="orbit orbit-three"/>
-        <div className="hero-art"><img src={`${A}black-original.png`} alt="The Body Wedge’s original patented shape, with raised contact points and a curved rocker base" width="639" height="723" fetchPriority="high"/></div>
-        <div className="hero-annotation annotation-top"><span className="annotation-tick"/><span>PATENTED FORM.<br/>PERSONAL FEEL.</span></div>
-        <div className="hero-annotation annotation-bottom"><span className="annotation-cross">+</span><div><strong>2.65<span>oz</span></strong><span>LIGHT ON WEIGHT.<br/>BIG ON INTENTION.</span></div></div>
-        <span className="stage-caption">THE BODY WEDGE / BLACK EDITION</span>
-      </div>
+    <div className="hero-layout"><div className="hero-copy"><h1><span className="hero-line">DEEP CORE.</span><span className="hero-line"><em>DAILY CARE.</em></span></h1><HeroStage paused={paused} mobile/><p>The Body Wedge is a patented self-massage tool designed to target the psoas and deep abdominal muscles. A distinctive shape. A more focused way to make core care part of your day.</p><div className="hero-actions"><Action href="/products/the-body-wedge">Shop Now — from $40 USD</Action><VideoButton title="How The Body Wedge works"/></div><p className="hero-shopping-note">Size &amp; density options · Instructions included · Buy direct</p></div>
+      <HeroStage paused={paused}/>
     </div>
     <div className="hero-bottom"><a href="#discover" className="scroll-cue"><span><ArrowDown size={16}/></span>What makes it different?</a><span className="hero-signature">PSOAS · ABDOMINAL CORE · HIP / BACK CONNECTION</span></div>
   </section>;
