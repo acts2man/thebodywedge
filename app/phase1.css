@@ -252,6 +252,133 @@ html:root{--ink:#181b21;--paper:#f5f6f8;--lime:#bad4ff;--blue:#2e63d2;--red:#bb5
   .newsletter-input-row{flex-direction:column}
   .newsletter-input-row .button{align-self:flex-start}
 }
+/* ── Why the front: psoas education ──────────────────────────────────────── */
+.front-first{background:radial-gradient(ellipse at 20% 8%,#1e2c44 0,transparent 58%),#101620;color:var(--paper);border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12}
+.front-first-top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:26px;border-bottom:1px solid #ffffff1f}
+.front-first-top .eyebrow{color:#a9c4ee}
+.front-first-top .section-note{color:#8090a8}
+.front-first-lede{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:6vw;align-items:start;padding-top:46px}
+.front-first-lede h2{font-size:clamp(37px,4.5vw,64px);font-weight:500;line-height:1.06;letter-spacing:-.05em}
+.front-first-lede h2 span{color:#7fa8ec}
+.front-first-intro p{font-size:16px;line-height:1.85;color:#b8c5d8}
+.front-first-intro p+p{margin-top:16px}
+.front-first-anatomy{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:6vw;align-items:center;margin-top:56px}
+.anatomy-figure{margin:0;background:linear-gradient(162deg,#192231,#111823);border:1px solid #ffffff14;padding:26px 20px 18px}
+.anatomy-figure figcaption{margin-top:12px;text-align:center;font-size:13px;letter-spacing:.06em;font-weight:600;color:#8394ad}
+.psoas-diagram{display:block;width:100%;height:auto;max-width:330px;margin:0 auto}
+.diagram-body{fill:#ffffff09;stroke:#ffffff30;stroke-width:2;stroke-dasharray:7 7}
+.diagram-bone{fill:#b6c4d8;stroke:#76869d;stroke-width:1.5;stroke-linejoin:round}
+.diagram-femur{fill:#8b9db7;stroke:#5c6d86;stroke-width:1.5;stroke-linejoin:round}
+.diagram-psoas{fill:url(#psoas-fill);stroke:#96b9f7;stroke-width:1.5}
+.diagram-psoas-fiber{fill:none;stroke:#d3e2fc;stroke-width:1.3;opacity:.4}
+.diagram-iliacus{fill:#2e63d2;fill-opacity:.55;stroke:#7fa6ee;stroke-width:1.2}
+.diagram-axis text{fill:#8798b0;font:700 12px/1 'Manrope',sans-serif;letter-spacing:.14em}
+.diagram-axis path{stroke:#5a6a83;stroke-width:1.4;fill:none}
+.diagram-axis .axis-head{fill:#5a6a83;stroke:none}
+.diagram-lead{fill:none;stroke:#8fb6f4;stroke-width:2.2;stroke-dasharray:6 5;stroke-linecap:round}
+.diagram-lead-head{fill:#8fb6f4;stroke:none}
+.diagram-marker-front{fill:var(--blue);stroke:#bad4ff;stroke-width:2.5}
+.diagram-marker-text{fill:#fff;font:700 18px/1 'Manrope',sans-serif}
+.diagram-marker-felt{fill:#151c28;stroke:#d98b91;stroke-width:2.5;stroke-dasharray:4 4}
+.diagram-marker-felt-text{fill:#eaa9ae;font:700 16px/1 'Manrope',sans-serif}
+.diagram-caption-group text{fill:#73839b;font:700 12px/1 'Manrope',sans-serif;letter-spacing:.12em}
+.anatomy-key{list-style:none;margin:0;padding:0}
+.anatomy-key>li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:0 18px;padding:22px 0;border-bottom:1px solid #ffffff18}
+.anatomy-key>li:first-child{padding-top:0}
+.key-badge{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1.5px dashed #d98b91;color:#eaa9ae;font-size:15px;font-weight:700}
+.key-front .key-badge{background:var(--blue);border:1.5px solid #bad4ff;color:#fff}
+.anatomy-key h3{font-size:19px;letter-spacing:-.025em;font-weight:600;margin-bottom:7px}
+.anatomy-key p{font-size:14px;line-height:1.8;color:#a8b6ca}
+.key-note{grid-template-columns:minmax(0,1fr)!important;border-bottom:0!important;padding-bottom:0!important}
+.key-note p{font-size:14px;line-height:1.85;color:#95a5bc;border-left:2px solid var(--blue);padding-left:17px}
+.front-first-chain{margin-top:62px;padding-top:46px;border-top:1px solid #ffffff1f}
+.chain-heading{max-width:640px}
+.chain-heading .eyebrow{color:#a9c4ee;margin-bottom:15px}
+.chain-heading h3{font-size:clamp(27px,3vw,41px);font-weight:500;line-height:1.14;letter-spacing:-.04em}
+.chain-figures{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap}
+.chain-figures figure{margin:0;flex:1 1 230px;min-width:0;background:#18212f;border:1px solid #ffffff14;padding:22px 20px}
+.hip-figure{display:block;width:100%;height:auto;max-width:205px;margin:0 auto}
+.hip-bone{fill:#ffffff10;stroke:#8fa1ba;stroke-width:2}
+.hip-joint{fill:#1d2839;stroke:#8fa1ba;stroke-width:2}
+.hip-seat{fill:#ffffff1a;stroke:#ffffff26;stroke-width:1}
+.hip-psoas{fill:none;stroke:#4f85e9;stroke-width:9;stroke-linecap:round}
+.chain-figures figcaption{margin-top:16px;text-align:center}
+.chain-figures figcaption strong{display:block;font-size:16px;margin-bottom:6px}
+.chain-figures figcaption span{font-size:14px;line-height:1.7;color:#a2b1c6}
+.chain-steps{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.chain-steps>li{border-top:1px solid #ffffff26;padding-top:17px}
+.chain-steps>li>span{display:block;font-size:13px;letter-spacing:.12em;font-weight:700;color:#7fa8ec;margin-bottom:12px}
+.chain-steps h4{font-size:17px;font-weight:600;letter-spacing:-.02em;margin:0 0 8px}
+.chain-steps p{font-size:14px;line-height:1.75;color:#a3b2c7}
+.chain-close{margin-top:32px;font-size:clamp(20px,2.1vw,27px);letter-spacing:-.03em;line-height:1.4;color:#dce6f5}
+.chain-close::before{content:'';display:block;width:46px;height:2px;background:var(--blue);margin-bottom:19px}
+.front-first-note{margin-top:46px;padding-top:24px;border-top:1px solid #ffffff1f;font-size:13px;line-height:1.9;color:#8a9ab0;max-width:840px}
+.front-first-note .text-link{font-size:13px;gap:6px;padding:0;margin-left:9px;color:#9dbef2;vertical-align:baseline}
+.front-first-compact .front-first-anatomy{margin-top:42px}
+
+/* ── Step 1 size, step 2 density ─────────────────────────────────────────── */
+.wedge-selector{margin:4px 0 6px}
+.selector-step+.selector-step{margin-top:30px;padding-top:30px;border-top:1px solid #ccd6e4}
+.step-head{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:0 15px;margin-bottom:18px}
+.step-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-size:15px;font-weight:700}
+.step-head h2{font-size:21px;letter-spacing:-.03em;font-weight:600;color:var(--ink)}
+.step-head p{font-size:14px;line-height:1.65;color:#5c6b7f;margin-top:5px}
+.step-head .size-guide-button{color:#2c5a9e;white-space:nowrap}
+.size-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.size-option{position:relative;display:flex;flex-direction:column;gap:12px;padding:14px 14px 0;border:1px solid #c0cad8;background:#fff;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s}
+.size-option:hover{border-color:#8ea7ca}
+.size-option.selected{border-color:#2558a9;background:#eaf1fc;box-shadow:inset 0 0 0 1px #2558a9}
+.size-option.unavailable{opacity:.66}
+.size-option-art{position:relative;display:grid;place-items:center;height:104px;background:#eef2f8;overflow:hidden}
+.size-option-art::before{content:'';position:absolute;left:0;right:0;bottom:-30%;height:72%;background:radial-gradient(ellipse at 50% 50%,var(--swatch) 0,transparent 68%);opacity:.24}
+.size-option-art img{position:relative;width:auto;height:86px;object-fit:contain;mix-blend-mode:multiply}
+.size-option-copy{display:flex;flex-direction:column;gap:4px;min-width:0}
+.size-option-title{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:700;letter-spacing:-.015em;color:var(--ink)}
+.size-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 1px #00000024}
+.size-option-height{font-size:14px;font-weight:600;color:#2f4d79}
+.size-option-torso{font-size:13px;line-height:1.6;color:#5f6e83}
+.size-option-state{display:flex;align-items:center;gap:6px;margin-top:auto;padding:11px 0;border-top:1px solid #d6deea;font-size:12px;letter-spacing:.09em;font-weight:700;text-transform:uppercase;color:#68768b}
+.size-option.selected .size-option-state{color:#2558a9;border-color:#b6caea}
+.sr-only-control{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.size-option:has(.sr-only-control:focus-visible),.density-option:has(.sr-only-control:focus-visible){outline:2px solid #2558a9;outline-offset:3px}
+.density-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.density-option{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:7px;padding:16px;border:1px solid #c0cad8;background:#fff;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s}
+.density-option:hover{border-color:#8ea7ca}
+.density-option.selected{border-color:#2558a9;background:#eaf1fc;box-shadow:inset 0 0 0 1px #2558a9}
+.density-option.unavailable{opacity:.66;cursor:not-allowed;background:#f1f4f9}
+.density-option-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;width:100%}
+.density-option-head strong{font-size:18px;letter-spacing:-.025em;color:var(--ink)}
+.density-option-head>span{font-size:16px;font-weight:700;color:#2558a9}
+.density-option-foam{font-size:12px;letter-spacing:.08em;font-weight:700;text-transform:uppercase;color:#65748c}
+.density-option-weight{padding:4px 10px;background:#e3eaf7;color:#27477a;font-size:13px;font-weight:700}
+.density-option.selected .density-option-weight{background:#d4e2fa}
+.density-option-detail{font-size:13px;line-height:1.7;color:#5c6b7f}
+.density-option-tag{font-size:12px;letter-spacing:.09em;font-weight:700;text-transform:uppercase;color:#a6313b}
+.selector-summary{display:flex;flex-direction:column;gap:9px;margin-top:26px;padding:16px 18px;background:#eef3fb;border:1px solid #c3d3ea}
+.selector-summary>.eyebrow{font-size:12px;color:#50678a}
+.selector-summary-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:18px;letter-spacing:-.02em;color:var(--ink)}
+.selector-summary-line .sep{color:#94a2b6}
+.selector-summary-price{margin-left:auto;font-weight:700;color:#2558a9}
+.selector-summary-note{display:flex;align-items:center;gap:8px;font-size:13px;line-height:1.6;color:#5f6e85}
+.selector-summary-note svg{flex-shrink:0;color:#7089ab}
+.size-dialog-steps{list-style:none;margin:6px 0 22px;padding:0;display:flex;flex-direction:column;gap:20px;text-align:left}
+.size-dialog-steps>li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:0 14px}
+.size-dialog-step{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700}
+.size-dialog-steps strong{display:block;font-size:15px;margin-bottom:9px;color:var(--ink)}
+.size-dialog-steps ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.size-dialog-steps ul li{display:flex;align-items:center;gap:10px;font-size:14px;line-height:1.65;color:#4f5f76}
+.size-dialog-steps ul li i{width:11px;height:11px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 1px #00000024}
+.size-dialog-density li{display:block}
+.size-dialog-steps b{color:var(--ink)}
+@media(min-width:851px) and (max-width:1350px){
+  .size-options{grid-template-columns:minmax(0,1fr);gap:10px}
+  .size-option{flex-direction:row;align-items:stretch;gap:14px;padding:12px}
+  .size-option-art{width:86px;height:auto;min-height:80px;flex-shrink:0}
+  .size-option-art img{height:66px}
+  .size-option-copy{flex:1;justify-content:center}
+  .size-option-state{margin-top:0;padding:0 0 0 13px;border-top:0;border-left:1px solid #d6deea;align-items:center}
+}
+@media(min-width:851px) and (max-width:1150px){.density-options{grid-template-columns:minmax(0,1fr);gap:10px}}
 @media(max-width:850px){
   .phase-one-site .section-pad{padding-top:62px;padding-bottom:62px}
   .phase-one-site .hero-layout{grid-template-columns:minmax(0,1fr);min-height:0}
@@ -276,6 +403,9 @@ html:root{--ink:#181b21;--paper:#f5f6f8;--lime:#bad4ff;--blue:#2e63d2;--red:#bb5
   .practitioner-form .form-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .practice-options{grid-template-columns:1fr;gap:34px}
   .practice-options>div+div{padding-top:30px;border-top:1px solid #becce0}
+  .front-first-lede,.front-first-anatomy{grid-template-columns:minmax(0,1fr);gap:34px}
+  .front-first-anatomy{margin-top:40px}
+  .chain-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .phase-product-page .product-detail{grid-template-columns:minmax(0,1fr);gap:40px}
   .phase-product-page .product-detail-art{min-height:460px}
   .product-education-note{display:none}
@@ -321,6 +451,24 @@ html:root{--ink:#181b21;--paper:#f5f6f8;--lime:#bad4ff;--blue:#2e63d2;--red:#bb5
   .newsletter-input-row{flex-direction:column}
   .newsletter-input-row .button{width:100%}
   .practitioner-strip h2{font-size:38px}
+  .front-first-top{flex-direction:column;align-items:flex-start;gap:9px}
+  .front-first-lede{padding-top:34px}
+  .front-first-lede h2{font-size:38px}
+  .anatomy-figure{padding:20px 14px 14px}
+  .anatomy-key>li{grid-template-columns:34px minmax(0,1fr);gap:0 14px;padding:19px 0}
+  .key-badge{width:32px;height:32px;font-size:14px}
+  .chain-steps,.chain-figures{grid-template-columns:minmax(0,1fr);flex-direction:column}
+  .size-options{grid-template-columns:minmax(0,1fr);gap:10px}
+  .size-option{flex-direction:row;align-items:stretch;gap:14px;padding:12px}
+  .size-option-art{width:84px;height:auto;min-height:78px;flex-shrink:0}
+  .size-option-art img{height:64px}
+  .size-option-copy{flex:1;justify-content:center}
+  .size-option-state{margin-top:0;padding:0 0 0 13px;border-top:0;border-left:1px solid #d6deea;align-items:center}
+  .density-options{grid-template-columns:minmax(0,1fr);gap:10px}
+  .step-head{grid-template-columns:30px minmax(0,1fr);align-items:start}
+  .step-number{width:30px;height:30px;font-size:14px}
+  .step-head .size-guide-button{grid-column:2;grid-row:2;justify-self:start;margin-top:11px}
+  .selector-summary-price{margin-left:0}
   .phase-product-page .product-detail-art{min-height:350px}
   .phase-product-page .product-details h1{font-size:39px}
   .phase-product-page .variant-option{font-size:14px;gap:10px}
