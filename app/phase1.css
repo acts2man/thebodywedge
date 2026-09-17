@@ -369,7 +369,27 @@ html:root{--ink:#181b21;--paper:#f5f6f8;--lime:#bad4ff;--blue:#2e63d2;--red:#bb5
 .size-dialog-steps ul li i{width:11px;height:11px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 1px #00000024}
 .size-dialog-density li{display:block}
 .size-dialog-steps b{color:var(--ink)}
-@media(min-width:851px) and (max-width:1350px){
+/* Product page: park the reference blocks under the gallery so the left column
+   carries its share instead of trailing off into dead space. Below 1100px the
+   wrapper dissolves, the split collapses, and `order` puts the aside back after
+   the buy column. */
+.product-column{display:flex;flex-direction:column;min-width:0}
+.product-aside{min-width:0}
+.phase-product-page .product-aside .product-detail-specs{margin-top:0;grid-template-columns:1fr 1fr}
+.phase-product-page .product-aside .product-extra{border-top:1px solid #c2cddd;margin-top:26px;padding-top:24px}
+@media(min-width:1101px){
+  .phase-product-page .product-detail-art{min-height:690px}
+  .phase-product-page .product-aside{margin-top:30px}
+}
+@media(min-width:1300px){.phase-product-page .product-detail-art{min-height:740px}}
+@media(max-width:1100px){
+  .phase-product-page .product-detail{grid-template-columns:minmax(0,1fr);gap:40px}
+  .product-column{display:contents}
+  .phase-product-page .product-details{order:1}
+  .phase-product-page .product-aside{order:2}
+  .phase-product-page .product-detail-art{min-height:520px}
+}
+@media(min-width:1101px) and (max-width:1350px){
   .size-options{grid-template-columns:minmax(0,1fr);gap:10px}
   .size-option{flex-direction:row;align-items:stretch;gap:14px;padding:12px}
   .size-option-art{width:86px;height:auto;min-height:80px;flex-shrink:0}
@@ -377,7 +397,7 @@ html:root{--ink:#181b21;--paper:#f5f6f8;--lime:#bad4ff;--blue:#2e63d2;--red:#bb5
   .size-option-copy{flex:1;justify-content:center}
   .size-option-state{margin-top:0;padding:0 0 0 13px;border-top:0;border-left:1px solid #d6deea;align-items:center}
 }
-@media(min-width:851px) and (max-width:1150px){.density-options{grid-template-columns:minmax(0,1fr);gap:10px}}
+
 @media(max-width:850px){
   .phase-one-site .section-pad{padding-top:62px;padding-bottom:62px}
   .phase-one-site .hero-layout{grid-template-columns:minmax(0,1fr);min-height:0}

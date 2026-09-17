@@ -34,7 +34,14 @@ export function ProductPage({handle}:{handle:string}){
   return <SiteShell><main id="main" className="phase-product-page">
     <div className="product-breadcrumbs light-surface"><div className="breadcrumbs"><Link href="/">Home</Link><span>/</span><Link href="/shop">Shop</Link><span>/</span><span>{product.title}</span></div></div>
     <section className="product-detail" aria-labelledby="product-title">
-      {renderGallery("desktop-flow-image-600")}
+      <div className="product-column">
+        {renderGallery("desktop-flow-image-600")}
+        <aside className="product-aside">
+          <div className="product-detail-specs"><span><Fingerprint size={18}/>Hand-inspired contours</span><span><Feather size={18}/>Lightweight foam</span><span><Layers3 size={18}/>Curved rocker base</span><span><Check size={18}/>Video education</span></div>
+          <div className="product-extra"><h2>{isKit?"Inside the kit":"What’s included"}</h2>{isKit?<ul><li>One Body Wedge with manual</li><li>Foam block, small yoga mat, knotted rope, and foam roller</li><li>Golf, tennis, lacrosse, softball, and rubber baseball</li><li>Mini basketball and air pin</li></ul>:<p>{isPair?"Two Body Wedges in your selected option, with instructions.":"One Body Wedge in your selected size and density, with instructions."} Explore the <Link href="/learn">free video library</Link> for product education.</p>}</div>
+          <div className="product-extra"><h2>Before you begin</h2><p>The Body Wedge supports self-massage and body awareness. It is not a treatment or cure, and abdominal self-massage is not suitable for everyone. Follow the <a href={`${SHOP_ORIGIN}/pages/disclaimer`}>full product safety guidance</a>.</p></div>
+        </aside>
+      </div>
       <div className="product-details" id="choose-your-wedge">
         <span className="eyebrow">PATENTED PSOAS &amp; CORE SELF-MASSAGE</span><h1 id="product-title">{product.title}</h1>
         <div className="mobile-flow-image mobile-flow-image-600">{renderGallery("product-gallery-mobile")}</div>
@@ -44,9 +51,6 @@ export function ProductPage({handle}:{handle:string}){
         {variant.available?<><div className="purchase-quantity"><label htmlFor="purchase-quantity">Quantity{isPair?" (sets)":""}</label><div><button type="button" aria-label="Decrease quantity" disabled={quantity<=1} onClick={()=>setQuantity(q=>Math.max(1,q-1))}><Minus size={17}/></button><input id="purchase-quantity" type="number" min="1" max="20" step="1" value={quantity} onChange={e=>setQuantity(Math.max(1,Math.min(20,Math.trunc(Number(e.target.value))||1)))}/><button type="button" aria-label="Increase quantity" disabled={quantity>=20} onClick={()=>setQuantity(q=>Math.min(20,q+1))}><Plus size={17}/></button></div></div><a className="button purchase-link" href={buyUrl}><span>Buy Now — ${total}</span><ArrowUpRight size={20}/></a></>:<><button className="button sold-out-button" disabled>Currently sold out</button><Link className="text-link" href="/contact">Ask about availability <ArrowUpRight size={17}/></Link></>}
         <p className="purchase-note">Secure checkout at TheBodyWedge.com. Prices are USD. Shipping, taxes, and final availability are confirmed at checkout.{isPair&&" For a mixed-size pair, confirm both choices with the team before ordering."}</p>
         <div className="purchase-policy-links"><a href={`${SHOP_ORIGIN}/pages/refund-policy`}>Returns policy</a><Link href="/contact">Product &amp; order help</Link></div>
-        <div className="product-detail-specs"><span><Fingerprint size={18}/>Hand-inspired contours</span><span><Feather size={18}/>Lightweight foam</span><span><Layers3 size={18}/>Curved rocker base</span><span><Check size={18}/>Video education</span></div>
-        <div className="product-extra"><h2>{isKit?"Inside the kit":"What’s included"}</h2>{isKit?<ul><li>One Body Wedge with manual</li><li>Foam block, small yoga mat, knotted rope, and foam roller</li><li>Golf, tennis, lacrosse, softball, and rubber baseball</li><li>Mini basketball and air pin</li></ul>:<p>{isPair?"Two Body Wedges in your selected option, with instructions.":"One Body Wedge in your selected size and density, with instructions."} Explore the <Link href="/learn">free video library</Link> for product education.</p>}</div>
-        <div className="product-extra"><h2>Before you begin</h2><p>The Body Wedge supports self-massage and body awareness. It is not a treatment or cure, and abdominal self-massage is not suitable for everyone. Follow the <a href={`${SHOP_ORIGIN}/pages/disclaimer`}>full product safety guidance</a>.</p></div>
       </div>
     </section>
     <WorksFromTheFront compact/><BuyDirect/><CustomerVoices/><CoreEducation compact/>
