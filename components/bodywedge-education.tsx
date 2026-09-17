@@ -100,7 +100,7 @@ function HipFigure({ seated }: { seated: boolean }) {
 export function WorksFromTheFront({ compact = false }: { compact?: boolean }) {
   return <section className={`front-first section-pad ${compact ? "front-first-compact" : ""}`} id="works-from-the-front" aria-labelledby="front-first-heading">
     <div className="front-first-top" data-reveal>
-      <span className="eyebrow">{compact ? "WHY THE FRONT?" : "02 / WHY YOU WORK FROM THE FRONT"}</span>
+      <span className="eyebrow">{compact ? "WHY THE FRONT?" : "01 / WHY YOU WORK FROM THE FRONT"}</span>
       <span className="section-note">THE PSOAS CROSSES FROM BACK TO FRONT</span>
     </div>
 
@@ -115,7 +115,7 @@ export function WorksFromTheFront({ compact = false }: { compact?: boolean }) {
     <div className="front-first-anatomy" data-reveal>
       <figure className="anatomy-figure">
         <PsoasDiagram/>
-        <figcaption>Psoas major in profile <figcaption>Psoas major, side view &mdash; lumbar spine to thigh bone. Simplified for clarity.</figcaption>mdash; spine to thigh bone.</figcaption>
+        <figcaption>Psoas major in profile &mdash; spine to thigh bone.</figcaption>
       </figure>
       <ol className="anatomy-key">
         <li className="key-front"><span className="key-badge">1</span><div><h3>Where the Wedge works.</h3><p>The front. Lying face down over the Wedge, its hand-inspired contours reach in through the abdominal wall, along the line the psoas travels.</p></div></li>
